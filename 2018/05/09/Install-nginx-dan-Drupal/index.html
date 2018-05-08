@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="id">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="nginx drupal," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon-32x32-next.png?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Tentang DrupalDrupal adalah sistem manajemen konten open source terkenal yang berbasis PHP. Ini tersedia secara gratis dan dirilis di bawah Lisensi Publik Umum GNU. Drupal dapat digunakan untuk semua">
+<meta name="keywords" content="nginx drupal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install nginx dan Drupal">
+<meta property="og:url" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/index.html">
+<meta property="og:site_name" content="Hanya Catatan Pengingat">
+<meta property="og:description" content="Tentang DrupalDrupal adalah sistem manajemen konten open source terkenal yang berbasis PHP. Ini tersedia secara gratis dan dirilis di bawah Lisensi Publik Umum GNU. Drupal dapat digunakan untuk semua">
+<meta property="og:locale" content="id">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/Drupal8_Nginx.jpg">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-1.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-2.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-3.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-4.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-5.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-5.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-6.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-console-1.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-console-2.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-console-3.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-console-4.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-site-install.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-site-install-1.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/drupal-6.png">
+<meta property="og:updated_time" content="2018-05-08T20:23:57.979Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Install nginx dan Drupal">
+<meta name="twitter:description" content="Tentang DrupalDrupal adalah sistem manajemen konten open source terkenal yang berbasis PHP. Ini tersedia secara gratis dan dirilis di bawah Lisensi Publik Umum GNU. Drupal dapat digunakan untuk semua">
+<meta name="twitter:image" content="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/Drupal8_Nginx.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":10,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Penulis'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/"/>
+
+
+
+
+
+  <title>Install nginx dan Drupal | Hanya Catatan Pengingat</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="id">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hanya Catatan Pengingat</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Beranda
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Arsip
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Kategori
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Pencarian
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bai Rahmat">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/my.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hanya Catatan Pengingat">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Install nginx dan Drupal</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Diposting di</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-09T01:09:33+07:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/09/Install-nginx-dan-Drupal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/09/Install-nginx-dan-Drupal/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article</span>
+                
+                <span title="Words count in article">
+                  1,403
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2018/05/09/Install-nginx-dan-Drupal/Drupal8_Nginx.jpg">
+<h4 id="Tentang-Drupal"><a href="#Tentang-Drupal" class="headerlink" title="Tentang Drupal"></a>Tentang Drupal</h4><p>Drupal adalah sistem manajemen konten open source terkenal yang berbasis PHP. Ini tersedia secara gratis dan dirilis di bawah Lisensi Publik Umum GNU. Drupal dapat digunakan untuk semua ukuran situs web, dari situs web internasional besar hingga blog pribadi dan situs perusahaan atau pemerintah. Bagian inti drupal diberi nama “Drupal Core”, berisi sistem manajemen konten dasar, manajemen pengguna, manajemen menu, penyesuaian tata letak dan administrasi sistem, sampai sekarang, komunitas drupal telah menyediakan lebih dari 31.000 modul untuk Drupal.</p>
+<h4 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h4><pre><code>- Ubuntu 16.04 - 64bit version.
+- Root privileges.
+</code></pre><h4 id="Install-dan-Konfigurasi-Nginx"><a href="#Install-dan-Konfigurasi-Nginx" class="headerlink" title="Install dan Konfigurasi Nginx"></a>Install dan Konfigurasi Nginx</h4><ul>
+<li><p>Step 1 - Update the Ubuntu system<br>  Login to the ubuntu server with ssh, then become root user and update the ubuntu repository:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Step 2 - Install Nginx and PHP-FPM<br>  Nginx atau “engine-x” adalah server HTTP cepat yang fokus pada kinerja tinggi dengan penggunaan memori / RAM yang rendah. Kita dapat menggunakan Nginx juga sebagai proxy terbalik, untuk protokol HTTP, HTTPS, POP3 dan IMAP. Dalam tutorial ini, kita akan menggunakan Nginx sebagai server HTTP SSL yang diaktifkan.<br>  Instal Nginx dengan perintah berikut, sebagai sudo / pengguna root:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx -y</span><br></pre></td></tr></table></figure>
+<p>  Selanjutnya, instal php7.1-fpm dengan ekstensi php-gd yang diperlukan oleh inti drupal:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository ppa:ondrej/php</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install php7.1</span><br><span class="line">sudo apt-cache search php7.1</span><br><span class="line">sudo apt-get install php7.1 php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-pgsql php7.1-xml php7.1-gd php7.1-cgi php7.1-cli php7.1-curl -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Step 3 - Configure Nginx and PHP-FPM<br>  Pada langkah ini, kita akan mengkonfigurasi Nginx untuk menggunakan php-fpm untuk melayani permintaan HTTP untuk halaman PHP. Masuk ke direktori php-fpm “/etc/php/7.1/fpm” dan edit file “php.ini”:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/php/7.1/fpm</span><br><span class="line">pico php.ini</span><br></pre></td></tr></table></figure>
+<p>  Dalam baris ke 761, uncomment baris cgi.fix_pathinfo ganti value ke “0”.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cgi.fix_pathinfo=0</span><br></pre></td></tr></table></figure>
+<p>  Simpan file and exit dari editor.<br>  Sekarang kita modifikasi konfigurasi virtual host Nginx default. Edit file “default” dan aktifkan php-fpm.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pico /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure>
+<p>  Uncomment baris 51 - 58 to use php-fpm with nginx.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.php$ &#123;</span><br><span class="line">               include snippets/fastcgi-php.conf;</span><br><span class="line">       #</span><br><span class="line">       #       # With php7.1-cgi alone:</span><br><span class="line">       #       fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">       #       # With php7.1-fpm:</span><br><span class="line">               fastcgi_pass unix:/run/php/php7.1-fpm.sock;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>  Simpan file and exit.<br>  Kemudian uji konfigurasi Nginx dengan perintah “nginx -t” untuk memastikan bahwa konfig kita sudah benar:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
+<p>  Jika tidak ada kesalahan, restart nginx dan layanan php-fpm:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/nginx restart</span><br><span class="line">systemctl restart php7.1-fpm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Step 4 - Configure the VirtualHost for Drupal<br>  Kita akan menginstal Drupal 8 di direktori “/htdocs/drupal/drupal8” dengan nama domain “drupal8.local”. Silakan ganti nama domain di instalasi Anda dengan nama domain dari situs web yang ingin Anda gunakan untuk instalasi drupal ini. Pertama kita buat direktori:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /htdocs/drupal/drupal8</span><br><span class="line">pico /etc/nginx/sites-available/drupal8</span><br></pre></td></tr></table></figure>
+<p>  Paste konfigurasi Nginx untuk drupal di bawah ke dalam file drupal8:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">   server_name drupal8.local;</span><br><span class="line">   root /htdocs/drupal/drupal8; ## &lt;-- Your only path reference.</span><br><span class="line"></span><br><span class="line">   listen 80;</span><br><span class="line">   listen [::]:80;</span><br><span class="line">   listen 443 default ssl;</span><br><span class="line"></span><br><span class="line">   ssl_certificate      /etc/nginx/ssl/drupal.crt;</span><br><span class="line">   ssl_certificate_key  /etc/nginx/ssl/drupal.key;</span><br><span class="line"></span><br><span class="line">   # Redirect HTTP to HTTPS</span><br><span class="line">   if ($scheme = http) &#123;</span><br><span class="line">       return 301 https://$server_name$request_uri;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location = /favicon.ico &#123;</span><br><span class="line">       log_not_found off;</span><br><span class="line">       access_log off;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location = /robots.txt &#123;</span><br><span class="line">       allow all;</span><br><span class="line">       log_not_found off;</span><br><span class="line">       access_log off;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location ~ \..*/.*\.php$ &#123;</span><br><span class="line">       return 403;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location ~ ^/sites/.*/private/ &#123;</span><br><span class="line">       return 403;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   # Block access to &quot;hidden&quot; files and directories whose names begin with a</span><br><span class="line">   # period. This includes directories used by version control systems such</span><br><span class="line">   # as Subversion or Git to store control files.</span><br><span class="line">   location ~ (^|/)\. &#123;</span><br><span class="line">       return 403;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location / &#123;</span><br><span class="line">       # try_files $uri @rewrite; # For Drupal &lt;= 6</span><br><span class="line">       try_files $uri /index.php?$query_string; # For Drupal &gt;= 7</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location @rewrite &#123;</span><br><span class="line">       rewrite ^/(.*)$ /index.php?q=$1;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   # In Drupal 8, we must also match new paths where the &apos;.php&apos; appears in the middle,</span><br><span class="line">   # such as update.php/selection. The rule we use is strict, and only allows this pattern</span><br><span class="line">   # with the update.php front controller.  This allows legacy path aliases in the form of</span><br><span class="line">   # blog/index.php/legacy-path to continue to route to Drupal nodes. If you do not have</span><br><span class="line">   # any paths like that, then you might prefer to use a laxer rule, such as:</span><br><span class="line">   #   location ~ \.php(/|$) &#123;</span><br><span class="line">   # The laxer rule will continue to work if Drupal uses this new URL pattern with front</span><br><span class="line">   # controllers other than update.php in a future release.</span><br><span class="line">   location ~ &apos;\.php$|^/update.php&apos; &#123;</span><br><span class="line">       fastcgi_split_path_info ^(.+?\.php)(|/.*)$;</span><br><span class="line">       #NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini</span><br><span class="line">       include fastcgi_params;</span><br><span class="line">       include snippets/fastcgi-php.conf;</span><br><span class="line">       fastcgi_param SCRIPT_FILENAME $request_filename;</span><br><span class="line">       fastcgi_intercept_errors on;</span><br><span class="line">       fastcgi_pass unix:/run/php/php7.1-fpm.sock;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   # Fighting with Styles? This little gem is amazing.</span><br><span class="line">   # location ~ ^/sites/.*/files/imagecache/ &#123; # For Drupal &lt;= 6</span><br><span class="line">   location ~ ^/sites/.*/files/styles/ &#123; # For Drpal &gt;= 7</span><br><span class="line">       try_files $uri @rewrite;</span><br><span class="line">   	&#125;</span><br><span class="line"></span><br><span class="line">   location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ &#123;</span><br><span class="line">       expires max;</span><br><span class="line">       log_not_found off;</span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  Simpan file and exit the editor.<br>  File virtual host Drupal telah dibuat, sekarang kita harus mengaktifkannya dengan membuat symlink ke file di direktori “sites-enabled”:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /etc/nginx/sites-available/drupal8 /etc/nginx/sites-enabled/</span><br></pre></td></tr></table></figure>
+<p>  Test Nginx configuration dan restart Nginx:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br><span class="line">/etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Install-dan-Konfigurasi-Drupal"><a href="#Install-dan-Konfigurasi-Drupal" class="headerlink" title="Install dan Konfigurasi Drupal"></a>Install dan Konfigurasi Drupal</h4><ul>
+<li><p>Step 1 Install Drupal Console<br>  Drupal Console adalah seperangkat alat yang dijalankan dari antarmuka baris perintah (CLI) untuk menghasilkan kode boilerplate dan berinteraksi dengan instalasi Drupal 8. Ini adalah alat penting bagi siapa pun yang menulis kode untuk Drupal.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install curl</span><br><span class="line">curl https://drupalconsole.com/installer -L -o drupal.phar</span><br><span class="line">mv drupal.phar /usr/local/bin/drupal</span><br><span class="line">chmod +x /usr/local/bin/drupal</span><br></pre></td></tr></table></figure>
+<p>  Install drupal console via composer</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer update drupal/console --with-dependencies</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Step 2 Download dan Install drupal8</p>
+<ul>
+<li><p>Download dan Install drupal8 via wget<br>Masuk ke direktori drupal8 yang kita buat sebelumnya dan unduh Drupal dengan wget atau drupal console. Saya akan menggunakan wget di sini:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /htdocs/drupal/drupal8</span><br><span class="line">wget https://ftp.drupal.org/files/projects/drupal-8.1.10.tar.gz</span><br><span class="line">tar -xzvf drupal-8.1.10.tar.gz</span><br><span class="line">mv drupal-8.1.10/* .</span><br><span class="line">rm -rf drupal-8.1.10</span><br></pre></td></tr></table></figure>
+<p>Pada langkah berikutnya, kita akan mengkonfigurasi file pengaturan Drupal. Dari direktori utama Drupal, masuk ke direktori “sites/default” dan salin dua file konfigurasi “settings.php” dan “services.yml”:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd sites/default</span><br><span class="line">cp default.settings.php settings.php</span><br><span class="line">cp default.services.yml services.yml</span><br></pre></td></tr></table></figure>
+<p>Kemudian kita harus membuat direktori baru dengan nama “files” di dalam direktori “sites/default”. Perintah “chmod” memastikan bahwa file konfigurasi dan direktori “files” dapat ditulis untuk instalasi Drupal:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir files/</span><br><span class="line">chmod a+w *</span><br></pre></td></tr></table></figure>
+<p>Sekarang kita buka situs Drupal (dalam kasus saya <a href="http://drupal8.local" target="_blank" rel="noopener">http://drupal8.local</a>) dengan Browser web,</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-1.png">
+<p>Pilih Bahasa, saya pilih “English” disini.<br>Click “Save and continue”.</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-2.png">
+<p>Pilih installation type. kita dapat memilih standard atau minimal type. Saya pilih “Standard”</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-3.png">
+<p>Sekarang kita masuk halaman konfigurasi database. Isi rincian basis data untuk database yang kita buat untuk Drupal.</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-4.png">
+<p>Tunggu installation sampai selesai.</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-5.png">
+<p>Sekarang kita harus mengkonfigurasi pengaturan profil situs seperti nama situs, pengguna, dan kata sandi untuk admin, alamat email dll.</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-5.png">
+<p>Drupal sudah terinstall, kita akan di redirect ke Drupal home page.</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-6.png">
+</li>
+<li><p>Download dan Install drupal8 via drupal console<br>Drupal Console  menyediakan lebih dari satu metode untuk download dan instal Drupal 8. Dalam posting ini saya akan mencantumkan langkah-langkah untuk mencapai proses instalasi.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drupal site:new</span><br></pre></td></tr></table></figure>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-console-1.png">
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-console-2.png">
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-console-3.png">
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-console-4.png">
+<p>Site Install</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd drupal8 (nama folder instalasi)</span><br><span class="line">composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader</span><br><span class="line">drupal site:install</span><br></pre></td></tr></table></figure>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-site-install.png">
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-site-install-1.png">
+<p>Tunggu sampai proses instalasi selesai, selanjutnya buka browser ( <a href="http://drupal.local" target="_blank" rel="noopener">http://drupal.local</a>)</p>
+<img src="/2018/05/09/Install-nginx-dan-Drupal/drupal-6.png">
+<p>Drupal sudah terinstall, kita akan di redirect ke Drupal home page.</p>
+<p>Selamat Mencoba, semoga berhasill…</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+<hr />
+<ul class="post-copyright">
+
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    
+    <a href="https://sameknet.github.io">Bai Rahmat</a>
+    
+  </li>
+  
+
+  
+
+  
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/" title="Install nginx dan Drupal">https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="" rel="external nofollow" target="_blank"></a> unless stating additionally.
+    </li>
+  
+</ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nginx-drupal/" rel="tag"><i class="fa fa-tag"></i> nginx drupal</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/08/belajar-git/" rel="next" title="Belajar Git Github">
+                <i class="fa fa-chevron-left"></i> Belajar Git Github
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Daftar Isi
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Ikhtisar
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/my.jpeg"
+               alt="Bai Rahmat" />
+          <p class="site-author-name" itemprop="name">Bai Rahmat</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">posting</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tentang-Drupal"><span class="nav-number">1.</span> <span class="nav-text">Tentang Drupal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prerequisites"><span class="nav-number">2.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-dan-Konfigurasi-Nginx"><span class="nav-number">3.</span> <span class="nav-text">Install dan Konfigurasi Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-dan-Konfigurasi-Drupal"><span class="nav-number">4.</span> <span class="nav-text">Install dan Konfigurasi Drupal</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="author" itemprop="copyrightHolder">Bai Rahmat</span>
+  <span class="post-count"> - 1.9k</span>
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://sameknet-github-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sameknet.github.io/2018/05/09/Install-nginx-dan-Drupal/';
+          this.page.identifier = '2018/05/09/Install-nginx-dan-Drupal/';
+          this.page.title = 'Install nginx dan Drupal';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://sameknet-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
