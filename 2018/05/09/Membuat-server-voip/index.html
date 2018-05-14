@@ -118,7 +118,12 @@
 <meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/install-briker-4.png">
 <meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/install-briker-5.png">
 <meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/install-briker-6.png">
-<meta property="og:updated_time" content="2018-05-14T11:20:28.639Z">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/voip-3.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/voip-2.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/voip-4.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/voip-5.png">
+<meta property="og:image" content="https://sameknet.github.io/2018/05/09/Membuat-server-voip/voip-7.png">
+<meta property="og:updated_time" content="2018-05-14T15:18:06.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Membuat Server Voip">
 <meta name="twitter:description" content="Pengenalan VoIPPerkembangan teknologi telah membawa bisnis Telephony memasuki era baru yang menawarkan penyatuan seluruh komunikasi yang bersifat multimedia dan disalurkan melalui Internet, Perkembang">
@@ -385,7 +390,7 @@
                   <span class="post-meta-item-text">Words count in article</span>
                 
                 <span title="Words count in article">
-                  422
+                  530
                 </span>
               
 
@@ -413,9 +418,7 @@
 <h4 id="Perancangan-Server-VoIP"><a href="#Perancangan-Server-VoIP" class="headerlink" title="Perancangan Server VoIP"></a>Perancangan Server VoIP</h4><p>VoIP server yang akan dibangun adalah menggunakan sistem operasi Linux server. Sistem Operasi Linux yang akan digunakan untuk pembuatan Server VoIP adalah Briker 2.0.4. Briker adalah distribusi Linux yang didalamnya terdapat aplikasi server yang memungkinkan pengguna mengimplementasikan layanan VoIP, membangun sentral telepon sendiri. Pada perancangan VoIP IP Address yang digunakan adalah IP Address IPV4. Server VoIP yang akan dibangun akan menggunakan protocol  Session  Initiation  Protocol  (SIP).  SIP yang digunakan adalah berupa aplikasi yang berfungsi sebagai Proxy Server, Redirect Server dan Registrar Server. Aplikasi ini dinamakan dengan Asterisk.</p>
 <p>Tahap perancangan server yang pertama dilakukan adalah melakukan instalasi system operasi Briker pada computer yang akan dijadikan sebagai server VoIP. Setelah melakukan instalasi kita akan melakukan konfigurasi pada sisi server, dengan melakukan pembagian ekstensi yaitu memberikan penomoran atau alamat pada sisi client untuk bisa saling berkomunikasi antar client yang lain. </p>
 <p>Perancangan yang akan dilakukan pada sisi client adalah dengan menyiapkan sebuah komputer dan handphone yang memiliki system operasi android  yang akan difungsikan untuk melakukan dan menerima panggilan.    </p>
-<h4 id="Instalasi-dan-Konfigurasi-Server-VoIP"><a href="#Instalasi-dan-Konfigurasi-Server-VoIP" class="headerlink" title="Instalasi dan Konfigurasi Server VoIP"></a>Instalasi dan Konfigurasi Server VoIP</h4><ul>
-<li>Instalasi Server VoIP<br>Proses Instalasi</li>
-</ul>
+<h4 id="Instalasi-dan-Konfigurasi-Server-VoIP"><a href="#Instalasi-dan-Konfigurasi-Server-VoIP" class="headerlink" title="Instalasi dan Konfigurasi Server VoIP"></a>Instalasi dan Konfigurasi Server VoIP</h4><h5 id="Instalasi-Server-VoIP"><a href="#Instalasi-Server-VoIP" class="headerlink" title="Instalasi Server VoIP"></a>Instalasi Server VoIP</h5><p>Proses Instalasi</p>
 <img src="/2018/05/09/Membuat-server-voip/install-briker-1.png">
 <center> Otomatis memeriksa perangkat keras jaringan, lalu mengkonfigurasi alamat IP secara otomatis </center>
 
@@ -434,9 +437,20 @@
 <img src="/2018/05/09/Membuat-server-voip/install-briker-6.png">
 <center> Instalasi sistem selesai, mesin akan restart kembali. </center>
 
-<ul>
-<li>Konfigurasi Server VoIP</li>
-</ul>
+<h5 id="Konfigurasi-Server-VoIP"><a href="#Konfigurasi-Server-VoIP" class="headerlink" title="Konfigurasi Server VoIP"></a>Konfigurasi Server VoIP</h5><p>Web Login<br>Browse alamat IP Briker melalui web browser, setelah itu akan muncul halaman untuk login seperti gambar di bawah ini.</p>
+<img src="/2018/05/09/Membuat-server-voip/voip-3.png">
+<hr>
+<p>Tampilan awal setelah kita melakukan Login</p>
+<img src="/2018/05/09/Membuat-server-voip/voip-2.png">
+<hr>
+<p>Menu-menu untuk mengatur fitur dari Server VoIP, antara lain pengaturan extensions, trunks dan routes. Fitur penting seperti Interactive Voice Response (IVR) dan Ring Group.</p>
+<img src="/2018/05/09/Membuat-server-voip/voip-4.png">
+<hr>
+<p>Call Detail Record Report, adalah laporan panggilan secara jelas dan lengkap, mulai dari waktu panggilan, tujuan panggilan, lama panggilan, asal panggilan, trunk yang digunakan, tarif panggilan, dan perhitungan keuntungan yang didapat. Menu ini dapat diakses dari menu Call Report, lalu pilih CDR Report.</p>
+<img src="/2018/05/09/Membuat-server-voip/voip-5.png">
+<hr>
+<p>Server VoIP status adalah menu untuk menampilak Status Registry user akun yang online.</p>
+<img src="/2018/05/09/Membuat-server-voip/voip-7.png">
 
       
     </div>
@@ -504,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/09/Instalasi-Voip-Client/" rel="next" title="Install Linphone">
-                <i class="fa fa-chevron-left"></i> Install Linphone
+              <a href="/2018/05/09/Install-nginx-dan-Drupal/" rel="next" title="Install nginx dan Drupal">
+                <i class="fa fa-chevron-left"></i> Install nginx dan Drupal
               </a>
             
           </div>
@@ -514,8 +528,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/09/Install-nginx-dan-Drupal/" rel="prev" title="Install nginx dan Drupal">
-                Install nginx dan Drupal <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/09/Instalasi-Voip-Client/" rel="prev" title="Install Linphone">
+                Install Linphone <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -644,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pengenalan-VoIP"><span class="nav-number">1.</span> <span class="nav-text">Pengenalan VoIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Perancangan-Server-VoIP"><span class="nav-number">2.</span> <span class="nav-text">Perancangan Server VoIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Instalasi-dan-Konfigurasi-Server-VoIP"><span class="nav-number">3.</span> <span class="nav-text">Instalasi dan Konfigurasi Server VoIP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pengenalan-VoIP"><span class="nav-number">1.</span> <span class="nav-text">Pengenalan VoIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Perancangan-Server-VoIP"><span class="nav-number">2.</span> <span class="nav-text">Perancangan Server VoIP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Instalasi-dan-Konfigurasi-Server-VoIP"><span class="nav-number">3.</span> <span class="nav-text">Instalasi dan Konfigurasi Server VoIP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Instalasi-Server-VoIP"><span class="nav-number">3.1.</span> <span class="nav-text">Instalasi Server VoIP</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Konfigurasi-Server-VoIP"><span class="nav-number">3.2.</span> <span class="nav-text">Konfigurasi Server VoIP</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -669,7 +683,7 @@
   &copy; 
   <span itemprop="copyrightYear">2018</span>
   <span class="author" itemprop="copyrightHolder">Bai Rahmat</span>
-  <span class="post-count"> - 2.7k</span>
+  <span class="post-count"> - 2.8k</span>
 </div>
 
 
