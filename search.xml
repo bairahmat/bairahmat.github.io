@@ -3,21 +3,6 @@
   
     
     <entry>
-      <title>Install Linphone</title>
-      <link href="/2018/05/09/Instalasi-Voip-Client/"/>
-      <url>/2018/05/09/Instalasi-Voip-Client/</url>
-      <content type="html"><![CDATA[<h2 id="Install-amp-Konfigurasi-Sofphone-Linphone-di-Bantos"><a href="#Install-amp-Konfigurasi-Sofphone-Linphone-di-Bantos" class="headerlink" title="Install &amp; Konfigurasi Sofphone Linphone di Bantos"></a>Install &amp; Konfigurasi Sofphone Linphone di Bantos</h2><p>Linphone adalah Softphone VOIP yang merupakan internet ponsel open source atau Voice Over IP phone (VoIP). Dengan linphone kita dapat berkomunikasi secara bebas dengan orang-orang melalui internet dengan suara. Linphone menggumnakan protokol SIP, sebuah standar terbuka untuk telepon internet. Linphone harus dapat saling beroperasi dengan sebagian SIP-kompatibel ponsel.</p><h3 id="Install-Linphone"><a href="#Install-Linphone" class="headerlink" title="Install Linphone"></a>Install Linphone</h3><p>Sebelum memasang linphone, tambahkan repositori linphone ke sistem :<br>Buka terminal gunakan perintah berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:linphone/release</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-1.png"><p>Kemudian jalankan perintah berikut untuk menerapkan perubahan di system :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-2.png"><p>Gunakan perintah berikut untuk menginstal perangkat lunak linphone :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install linphone -y</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-3.png"><p>Cari dan klik ikon linphone di dashboard Bantos</p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-4.png"><h3 id="Konfigurasi-Linphone"><a href="#Konfigurasi-Linphone" class="headerlink" title="Konfigurasi Linphone"></a>Konfigurasi Linphone</h3><p>Halaman beranda linphone akan muncul sebagai berikut.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-1.png"></p><p>Pilih “I have already a SIP acount and I just want to use it”<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-2.png"></p><p>Masukkan detail Akun kita dan klik Apply.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-3.png"></p><p>Sekarang kita dapat mulai menggunakan Linphone di Linux Bantos.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-4.png"></p><p>Thank you! for using Linux Bantos.</p>]]></content>
-      
-      
-        <tags>
-            
-            <tag> Linphone </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>Install nginx dan Drupal</title>
       <link href="/2018/05/09/Install-nginx-dan-Drupal/"/>
       <url>/2018/05/09/Install-nginx-dan-Drupal/</url>
@@ -27,6 +12,21 @@
         <tags>
             
             <tag> nginx drupal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Install Linphone</title>
+      <link href="/2018/05/09/Instalasi-Voip-Client/"/>
+      <url>/2018/05/09/Instalasi-Voip-Client/</url>
+      <content type="html"><![CDATA[<h2 id="Install-amp-Konfigurasi-Sofphone-Linphone-di-Bantos"><a href="#Install-amp-Konfigurasi-Sofphone-Linphone-di-Bantos" class="headerlink" title="Install &amp; Konfigurasi Sofphone Linphone di Bantos"></a>Install &amp; Konfigurasi Sofphone Linphone di Bantos</h2><p>Linphone adalah Softphone VOIP yang merupakan internet ponsel open source atau Voice Over IP phone (VoIP). Dengan linphone kita dapat berkomunikasi secara bebas dengan orang-orang melalui internet dengan suara. Linphone menggumnakan protokol SIP, sebuah standar terbuka untuk telepon internet. Linphone harus dapat saling beroperasi dengan sebagian SIP-kompatibel ponsel.</p><h3 id="Install-Linphone"><a href="#Install-Linphone" class="headerlink" title="Install Linphone"></a>Install Linphone</h3><p>Sebelum memasang linphone, tambahkan repositori linphone ke sistem :<br>Buka terminal gunakan perintah berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:linphone/release</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-1.png"><p>Kemudian jalankan perintah berikut untuk menerapkan perubahan di system :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-2.png"><p>Gunakan perintah berikut untuk menginstal perangkat lunak linphone :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install linphone -y</span><br></pre></td></tr></table></figure></p><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-3.png"><p>Cari dan klik ikon linphone di dashboard Bantos<br><img src="/2018/05/09/Instalasi-Voip-Client/install-linphone-4.png"></p><h3 id="Konfigurasi-Linphone"><a href="#Konfigurasi-Linphone" class="headerlink" title="Konfigurasi Linphone"></a>Konfigurasi Linphone</h3><p>Halaman beranda linphone akan muncul sebagai berikut.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-1.png"></p><p>Pilih “I have already a SIP acount and I just want to use it”<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-2.png"></p><p>Masukkan detail Akun kita dan klik Apply.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-3.png"></p><p>Sekarang kita dapat mulai menggunakan Linphone di Linux Bantos.<br><img src="/2018/05/09/Instalasi-Voip-Client/konfig-linphone-4.png"></p><p>Thank you! for using Linux Bantos.</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> Linphone </tag>
             
         </tags>
       
