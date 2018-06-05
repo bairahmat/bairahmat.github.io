@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="myblog" />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -104,13 +104,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hanya Catatan Pengingat">
-<meta property="og:url" content="https://bairahmat.github.io/tags/git/index.html">
+<meta name="description" content="Nginx dan Apache Nginx dan Apache adalah server web yang kuat. Kekuatan Apache dan kecepatan Nginx sudah sangat dikenal, Namun, keduanya memang memiliki kekurangan. Apache sulit di memori server semen">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx as a reverse proxy for Apache">
+<meta property="og:url" content="https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/index.html">
 <meta property="og:site_name" content="Hanya Catatan Pengingat">
+<meta property="og:description" content="Nginx dan Apache Nginx dan Apache adalah server web yang kuat. Kekuatan Apache dan kecepatan Nginx sudah sangat dikenal, Namun, keduanya memang memiliki kekurangan. Apache sulit di memori server semen">
 <meta property="og:locale" content="id">
+<meta property="og:updated_time" content="2018-06-05T19:22:17.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hanya Catatan Pengingat">
+<meta name="twitter:title" content="Nginx as a reverse proxy for Apache">
+<meta name="twitter:description" content="Nginx dan Apache Nginx dan Apache adalah server web yang kuat. Kekuatan Apache dan kecepatan Nginx sudah sangat dikenal, Namun, keduanya memang memiliki kekurangan. Apache sulit di memori server semen">
 
 
 
@@ -138,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://bairahmat.github.io/tags/git/"/>
+  <link rel="canonical" href="https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/"/>
 
 
 
 
 
-  <title>Tag: git | Hanya Catatan Pengingat</title>
+  <title>Nginx as a reverse proxy for Apache | Hanya Catatan Pengingat</title>
   
 
 
@@ -171,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,44 +294,250 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2>git<small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bai Rahmat">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/my.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hanya Catatan Pengingat">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Nginx as a reverse proxy for Apache</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Diposting di</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-06T01:10:33+07:00">
+                2018-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/06/Nginx as a reverse proxy for Apache/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/06/Nginx as a reverse proxy for Apache/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article</span>
+                
+                <span title="Words count in article">
+                  499
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h4 id="Nginx-dan-Apache"><a href="#Nginx-dan-Apache" class="headerlink" title="Nginx dan Apache"></a>Nginx dan Apache</h4><p> Nginx dan Apache adalah server web yang kuat. Kekuatan Apache dan kecepatan Nginx sudah sangat dikenal, Namun, keduanya memang memiliki kekurangan. Apache sulit di memori server sementara Nginx tidak dapat memproses PHP sendiri dan memerlukan bantuan PHP-FPM atau modul untuk konten dinamis.</p>
+<p> Dalam catatan ini, kita akan menggabungkan dua server web untuk bisa mendapatkan hasil terbaik satu sama lain, Kita akan menetapkan Nginx sebagai prosesor konten statis dan Apache untuk memproses konten belakang dan dinamis.</p>
+<h4 id="Install-and-Konfigurasi-Nginx"><a href="#Install-and-Konfigurasi-Nginx" class="headerlink" title="Install and Konfigurasi Nginx"></a>Install and Konfigurasi Nginx</h4><ul>
+<li><p>Update repositories</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install Epel repositories</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install Nginx di Centos 7</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enable dan start Nginx service</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat Konfigurasi Nginx</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/nginx/conf.d/default.conf</span><br></pre></td></tr></table></figure>
+<p>  contoh konfigurasi :</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">      listen   80; </span><br><span class="line"></span><br><span class="line">      root /usr/share/nginx/html/; </span><br><span class="line">      index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">      server_name _; </span><br><span class="line"></span><br><span class="line">      location / &#123;</span><br><span class="line">      try_files $uri $uri/ /index.php;</span><br><span class="line">      	&#125;</span><br><span class="line"></span><br><span class="line">      location ~ \.php$ &#123;</span><br><span class="line">      </span><br><span class="line">      proxy_set_header X-Real-IP  $remote_addr;</span><br><span class="line">      proxy_set_header X-Forwarded-For $remote_addr;</span><br><span class="line">      proxy_set_header Host $host;</span><br><span class="line">      proxy_pass http://127.0.0.1:8080;</span><br><span class="line"></span><br><span class="line">       	&#125;</span><br><span class="line"></span><br><span class="line">       location ~ /\.ht &#123;</span><br><span class="line">              deny all;</span><br><span class="line">      	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Install-dan-Konfigurasi-Apache"><a href="#Install-dan-Konfigurasi-Apache" class="headerlink" title="Install dan Konfigurasi Apache"></a>Install dan Konfigurasi Apache</h4><ul>
+<li><p>Install Apache web server:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Start dan enable apache service:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable httpd</span><br><span class="line">systemctl start httpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Konfigurasi Apache<br>  Kita perlu mengkonfigurasi Apache untuk menjadi backend, kita perlu mengkonfigurasi Apache pada port 8080:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>  Temukan baris yang dimulai dengan “Listen”, ganti baris berikut dengan dibawah ini:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Listen 127.0.0.1:8080</span><br></pre></td></tr></table></figure>
+<p>  Kemudian temukan baris yang dimulai dengan “DocumentRoot” dan ubah seperti di bawah ini:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DocumentRoot &quot;/path/folder root kita/&quot;</span><br></pre></td></tr></table></figure>
+<p>  Save and Exit.</p>
+</li>
+</ul>
+<h4 id="Install-PHP-v7-1-0"><a href="#Install-PHP-v7-1-0" class="headerlink" title="Install PHP v7.1.0"></a>Install PHP v7.1.0</h4><p> Hal pertama yang akan kita lakukan adalah menginstal tambahan CentOS7 repo yang berisi paket-paket yang diperlukan untuk PHP v7.1<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm</span><br><span class="line">rpm -Uvh remi-release-7.rpm</span><br></pre></td></tr></table></figure></p>
+<p> Aktifkan repositori php71 yang dinonaktifkan secara default:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install yum-utils -y</span><br><span class="line">yum-config-manager --enable remi-php71</span><br></pre></td></tr></table></figure></p>
+<p> install PHP package:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum --enablerepo=remi,remi-php71 install php-fpm php-common</span><br></pre></td></tr></table></figure></p>
+<p> Install common modules:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum --enablerepo=remi,remi-php71 install php-opcache php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml</span><br></pre></td></tr></table></figure></p>
+<p> Konfigurasi PHP-FPM supaya berjalan di user apache<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/php-fpm.d/www.conf</span><br></pre></td></tr></table></figure></p>
+<p> Temukan and replace baris berikut:<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user = apache</span><br><span class="line">group = apache</span><br></pre></td></tr></table></figure></p>
+<p> dibawah baris ;listen = 127.0.0.1:9000 kita tambahkan file:<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen = /var/run/php-fpm/php-fpm.sock</span><br></pre></td></tr></table></figure></p>
+<p> Simpan file dengan menekan CTRL + X. Dan akhirnya, mulai php-fpm dan aktifkan saat boot:<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start php-fpm.service</span><br><span class="line">systemctl enable php-fpm.service</span><br></pre></td></tr></table></figure></p>
+<p> Sekian catatan ini, selamat mencoba dan semoga berhasil.</p>
 
-      <h3 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2018/05/08/belajar-git/" itemprop="url">
-              
-                <span itemprop="name">Belajar Git Github</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T00:49:15+07:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+<hr />
+<ul class="post-copyright">
+
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    
+    <a href="https://bairahmat.github.io">Bai Rahmat</a>
+    
+  </li>
+  
+
+  
+
+  
+    <li class="post-copyright-link">
+      <strong>Post link:</strong>
+      <a href="https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/" title="Nginx as a reverse proxy for Apache">https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright Notice: </strong>
+      All articles in this blog are licensed under <a href="" rel="external nofollow" target="_blank"></a> unless stating additionally.
+    </li>
+  
+</ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"><i class="fa fa-tag"></i> nginx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/09/Instalasi-Voip-Client/" rel="next" title="Install Linphone">
+                <i class="fa fa-chevron-left"></i> Install Linphone
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -334,6 +545,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -354,8 +576,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Daftar Isi
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Ikhtisar
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/my.jpeg"
@@ -408,6 +639,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx-dan-Apache"><span class="nav-number">1.</span> <span class="nav-text">Nginx dan Apache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-and-Konfigurasi-Nginx"><span class="nav-number">2.</span> <span class="nav-text">Install and Konfigurasi Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-dan-Konfigurasi-Apache"><span class="nav-number">3.</span> <span class="nav-text">Install dan Konfigurasi Apache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Install-PHP-v7-1-0"><span class="nav-number">4.</span> <span class="nav-text">Install PHP v7.1.0</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -514,10 +761,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
@@ -535,6 +782,18 @@
       <script id="dsq-count-scr" src="https://sameknet-github-io.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://bairahmat.github.io/2018/06/06/Nginx as a reverse proxy for Apache/';
+          this.page.identifier = '2018/06/06/Nginx as a reverse proxy for Apache/';
+          this.page.title = 'Nginx as a reverse proxy for Apache';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://sameknet-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
